@@ -98,7 +98,6 @@
                 送信する
               </button>
             </div>
-            <p id="result" class="text-base text-center text-gray-400"></p>
           </form>
         </div>
       </div>
