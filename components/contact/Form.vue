@@ -9,17 +9,7 @@
             お問い合わせ
           </h1>
         </div>
-        <div v-if="isSubmited" class="m-7 text-center">
-          <h1>お問い合わせいただきありがとうございます。</h1>
-          <h2>ご返信までしばらくお待ちください。</h2>
-          <nuxt-link
-            to="/"
-            type="button"
-            class="py-4 px-8 mt-8 text-lg text-gray-50 bg-green-500 hover:bg-green-600 focus:ring-green-600 focus:ring-offset-green-600 transition ease-in duration-200 text-center font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-full"
-          >
-            TOPへ戻る
-          </nuxt-link>
-        </div>
+        <Submitted v-if="isSubmited" />
         <div v-if="!isSubmited" class="m-7">
           <form>
             <div class="mb-6">
@@ -107,8 +97,13 @@
 
 <script lang="ts">
 import { defineComponent, useContext, ref } from '@nuxtjs/composition-api'
+import Submitted from '@/components/contact/Submitted.vue'
+
 export default defineComponent({
   name: 'Form',
+  components: {
+    Submitted
+  },
   setup() {
     const { $axios } = useContext()
     const name = ref('')
