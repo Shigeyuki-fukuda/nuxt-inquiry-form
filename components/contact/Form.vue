@@ -2,13 +2,7 @@
   <div class="flex items-center min-h-screen bg-black">
     <div class="container mx-auto">
       <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
-        <div class="text-center">
-          <h1
-            class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200"
-          >
-            お問い合わせ
-          </h1>
-        </div>
+        <Headline />
         <Submitted v-if="isSubmited" />
         <div v-if="!isSubmited" class="m-7">
           <form>
@@ -97,11 +91,13 @@
 
 <script lang="ts">
 import { defineComponent, useContext, ref } from '@nuxtjs/composition-api'
+import Headline from '@/components/contact/Headline.vue'
 import Submitted from '@/components/contact/Submitted.vue'
 
 export default defineComponent({
   name: 'Form',
   components: {
+    Headline,
     Submitted
   },
   setup() {
