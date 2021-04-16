@@ -5,7 +5,7 @@
     <div>
       <h1 class="block font-bold text-6xl text-gray-50">TOP PAGE</h1>
       <nuxt-link
-        to="/inquiry"
+        to="/contact"
         type="button"
         class="py-4 px-8 mt-8 text-2xl text-gray-50 bg-green-500 hover:bg-green-600 focus:ring-green-600 focus:ring-offset-green-600 text-white transition ease-in duration-200 text-center font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-full"
       >

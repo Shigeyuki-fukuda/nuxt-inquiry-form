@@ -108,6 +108,7 @@
 <script lang="ts">
 import { defineComponent, useContext, ref } from '@nuxtjs/composition-api'
 export default defineComponent({
+  name: 'Form',
   setup() {
     const { $axios } = useContext()
     const name = ref('')
@@ -118,8 +119,8 @@ export default defineComponent({
 
     const onSubmit = async () => {
       return await $axios
-        .post('/inquiry', {
-          inquiry: {
+        .post('/contact', {
+          contact: {
             name,
             email,
             phone,
