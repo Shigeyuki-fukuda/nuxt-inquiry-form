@@ -20,11 +20,10 @@
               <Label>
                 メールアドレス <span class="text-xs text-red-500">(必須)</span>
               </Label>
-              <input
+              <EmailInput
                 v-model="email"
-                type="email"
-                placeholder="your@example.com"
-                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                :type="'email'"
+                :placeholder="'your@example.com'"
               />
             </div>
             <div class="mb-12">
@@ -69,6 +68,7 @@ import Headline from '@/components/contact/Headline.vue'
 import Submitted from '@/components/contact/Submitted.vue'
 import Label from '@/components/contact/Label.vue'
 import NameInput from '@/components/contact/NameInput.vue'
+import EmailInput from '@/components/contact/EmailInput.vue'
 
 export default defineComponent({
   name: 'Form',
@@ -77,6 +77,7 @@ export default defineComponent({
     Submitted,
     Label,
     NameInput,
+    EmailInput,
   },
   setup() {
     const { $axios } = useContext()
