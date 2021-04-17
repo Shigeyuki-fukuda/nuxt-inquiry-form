@@ -10,11 +10,10 @@
               <Label>
                 お名前 <span class="text-xs text-red-500">(必須)</span>
               </Label>
-              <input
+              <NameInput
                 v-model="name"
-                type="text"
-                placeholder="お名前太郎"
-                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                :type="'text'"
+                :placeholder="'お名前太郎'"
               />
             </div>
             <div class="mb-12">
@@ -69,6 +68,7 @@ import { defineComponent, useContext, ref } from '@nuxtjs/composition-api'
 import Headline from '@/components/contact/Headline.vue'
 import Submitted from '@/components/contact/Submitted.vue'
 import Label from '@/components/contact/Label.vue'
+import NameInput from '@/components/contact/NameInput.vue'
 
 export default defineComponent({
   name: 'Form',
@@ -76,6 +76,7 @@ export default defineComponent({
     Headline,
     Submitted,
     Label,
+    NameInput,
   },
   setup() {
     const { $axios } = useContext()
