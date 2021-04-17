@@ -38,13 +38,10 @@
               <Label>
                 内容 <span class="text-xs text-red-500">(必須)</span>
               </Label>
-              <textarea
+              <MessageInput
                 v-model="message"
-                rows="5"
-                placeholder="お問い合わせ内容です"
-                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-              >
-              </textarea>
+                :placeholder="'お問い合わせ内容です'"
+              />
             </div>
             <div class="mb-12">
               <button
@@ -69,6 +66,7 @@ import Label from '@/components/contact/Label.vue'
 import NameInput from '@/components/contact/NameInput.vue'
 import EmailInput from '@/components/contact/EmailInput.vue'
 import PhoneInput from '@/components/contact/PhoneInput.vue'
+import MessageInput from '@/components/contact/MessageInput.vue'
 
 export default defineComponent({
   name: 'Form',
@@ -79,6 +77,7 @@ export default defineComponent({
     NameInput,
     EmailInput,
     PhoneInput,
+    MessageInput,
   },
   setup() {
     const { $axios } = useContext()
