@@ -44,12 +44,7 @@
               />
             </div>
             <div class="mb-12">
-              <button
-                class="w-full px-3 py-4 font-bold text-white bg-green-500 rounded-md focus:bg-green-600 focus:outline-none"
-                @click.prevent="onSubmit"
-              >
-                送信する
-              </button>
+              <Button @click="onSubmit">送信する</Button>
             </div>
           </form>
         </div>
@@ -67,6 +62,7 @@ import NameInput from '@/components/contact/NameInput.vue'
 import EmailInput from '@/components/contact/EmailInput.vue'
 import PhoneInput from '@/components/contact/PhoneInput.vue'
 import MessageInput from '@/components/contact/MessageInput.vue'
+import Button from '@/components/contact/Button.vue'
 
 export default defineComponent({
   name: 'Form',
@@ -78,6 +74,7 @@ export default defineComponent({
     EmailInput,
     PhoneInput,
     MessageInput,
+    Button,
   },
   setup() {
     const { $axios } = useContext()
