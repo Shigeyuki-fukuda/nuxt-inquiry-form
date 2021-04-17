@@ -8,7 +8,7 @@ import ContactForm from '@/components/contact/Form.vue'
 
 export default defineComponent({
   components: {
-    ContactForm
-  }
+    ContactForm,
+  },
 })
 </script>
