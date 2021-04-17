@@ -55,14 +55,14 @@
 
 <script lang="ts">
 import { defineComponent, useContext, ref } from '@nuxtjs/composition-api'
-import Headline from '@/components/contact/Headline.vue'
-import Submitted from '@/components/contact/Submitted.vue'
-import Label from '@/components/contact/Label.vue'
-import NameInput from '@/components/contact/NameInput.vue'
-import EmailInput from '@/components/contact/EmailInput.vue'
-import PhoneInput from '@/components/contact/PhoneInput.vue'
-import MessageInput from '@/components/contact/MessageInput.vue'
-import Button from '@/components/contact/Button.vue'
+import Headline from '@/components/inquiry/Headline.vue'
+import Submitted from '@/components/inquiry/Submitted.vue'
+import Label from '@/components/inquiry/Label.vue'
+import NameInput from '@/components/inquiry/NameInput.vue'
+import EmailInput from '@/components/inquiry/EmailInput.vue'
+import PhoneInput from '@/components/inquiry/PhoneInput.vue'
+import MessageInput from '@/components/inquiry/MessageInput.vue'
+import Button from '@/components/inquiry/Button.vue'
 
 export default defineComponent({
   name: 'Form',
@@ -86,7 +86,7 @@ export default defineComponent({
 
     const onSubmit = async () => {
       return await $axios
-        .post('/contact', {
+        .post('/inquiry', {
           contact: {
             name,
             email,

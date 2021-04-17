@@ -13,7 +13,7 @@ import { defineComponent, SetupContext } from '@vue/composition-api'
 export default defineComponent({
   name: 'EmailInput',
   props: {
-    typs: { type: String, required: true },
+    type: { type: String, required: true },
     placeholder: { type: String, required: false, default: 'nuxt@example.com' },
   },
   setup(_, context: SetupContext) {

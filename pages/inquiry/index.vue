@@ -1,14 +1,14 @@
 <template>
-  <ContactForm></ContactForm>
+  <InquiryForm></InquiryForm>
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import ContactForm from '@/components/contact/Form.vue'
+import InquiryForm from '@/components/inquiry/Form.vue'
 
 export default defineComponent({
   components: {
-    ContactForm,
+    InquiryForm,
   },
 })
 </script>
