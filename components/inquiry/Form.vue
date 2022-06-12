@@ -7,7 +7,7 @@
         <div v-if="!isSubmited" class="m-7">
           <form>
             <div class="mb-12">
-              <Label>
+              <Label for="name">
                 お名前 <span class="text-xs text-red-500">(必須)</span>
               </Label>
               <NameInput
@@ -21,7 +21,7 @@
               />
             </div>
             <div class="mb-12">
-              <Label>
+              <Label for="email">
                 メールアドレス <span class="text-xs text-red-500">(必須)</span>
               </Label>
               <EmailInput
@@ -35,7 +35,7 @@
               />
             </div>
             <div class="mb-12">
-              <Label> 電話番号 </Label>
+              <Label for="phone"> 電話番号 </Label>
               <PhoneInput
                 v-model="phone"
                 :type="'tel'"
@@ -47,7 +47,7 @@
               />
             </div>
             <div class="mb-12">
-              <Label>
+              <Label for="message">
                 内容 <span class="text-xs text-red-500">(必須)</span>
               </Label>
               <MessageInput
