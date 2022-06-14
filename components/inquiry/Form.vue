@@ -2,7 +2,11 @@
   <div class="flex items-center min-h-screen bg-black">
     <div class="container mx-auto">
       <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
-        <Headline />
+        <div class="text-center">
+          <h1 id="formTitle" class="my-3 text-3xl font-semibold text-gray-700">
+            お問い合わせ
+          </h1>
+        </div>
         <Submitted v-if="isSubmited" />
         <div v-if="!isSubmited" class="m-7">
           <form>
@@ -72,7 +76,6 @@
 <script lang="ts">
 import { defineComponent, useContext, ref } from '@nuxtjs/composition-api'
 import { useValidation } from 'vue-composable'
-import Headline from '@/components/inquiry/Headline.vue'
 import Submitted from '@/components/inquiry/Submitted.vue'
 import Label from '@/components/inquiry/Label.vue'
 import NameInput from '@/components/inquiry/NameInput.vue'
@@ -85,7 +88,6 @@ import Error from '@/components/inquiry/Error.vue'
 export default defineComponent({
   name: 'Form',
   components: {
-    Headline,
     Submitted,
     Label,
     NameInput,
