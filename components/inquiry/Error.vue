@@ -1,5 +1,5 @@
 <template>
-  <p class="text-xs text-red-500 mt-3">{{ message }}</p>
+  <p aria-live="polite" class="text-xs text-red-500 mt-3">{{ message }}</p>
 </template>
 
 <script lang="ts">
