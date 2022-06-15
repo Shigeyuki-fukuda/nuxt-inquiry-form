@@ -9,7 +9,7 @@
         </div>
         <Submitted v-if="isSubmited" />
         <div v-if="!isSubmited" class="m-7">
-          <form>
+          <form aria-labelledby="formTitle">
             <div class="mb-12">
               <Label for="name">
                 お名前 <span class="text-xs text-red-500">(必須)</span>
